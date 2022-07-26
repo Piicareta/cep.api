@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+
+:root {
+    background-color: rgb(230, 230, 230);
+    font-size: 62.5%;
+}
+
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: rgb(20,20,20);
+    font-family: 'Kanit', sans-serif;
+}
+
+.container {
+    height: 100vh;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.flex-column {
+    background-color: rgb(230, 230, 230);
+    box-shadow: inset 15px 15px 20px rgb(150, 150, 150), inset -15px -15px 20px white;
+    border-radius: 3rem;
+    width: 50rem;
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+}
+
+input {
+    margin-bottom: 3.5rem;
+    width: 35rem;
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+    padding: 1.5rem 2rem;
+    background-color: rgb(230, 230, 230);
+    box-shadow: inset 5px 5px 15px rgb(100, 100, 100), inset -5px -5px 15px white;
+    transition: 500ms;
+}
+
+input:focus {
+    box-shadow: inset 0 0 0 rgb(100, 100, 100),
+    inset 0 0 0 white,
+    5px 5px 15px rgb(100, 100, 100),
+    -5px -5px 15px white;  
+    background-color: rgb(245, 245, 245);
+}
+
+input::placeholder {
+    opacity: 1;
+    transition: 500ms;
+}
+
+input:focus::placeholder {
+    letter-spacing: 2rem;
+    padding: 1.5rem 5rem;
+    opacity: 0;
+}
+
+.btn {
+    padding: 1.5rem 5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 3rem;
+    box-shadow: inset 5px 5px 15px rgb(100, 100, 100), inset -5px -5px 15px white;
+    transition: 300ms;
+}
+
+.btn:hover {
+    box-shadow: inset 0 0 0 rgb(100, 100, 100),
+    inset 0 0 0 white,
+    5px 5px 15px rgb(100, 100, 100),
+    -5px -5px 15px white; 
+    background-color: rgb(245, 245, 245); 
+}
+
+.anima {
+    animation: sendAnima 500ms ease-in-out;
+}
+
+@keyframes sendAnima {
+    50% {
+        opacity: 0;
+        transform: translateX(8rem);
+    }
+    51% {
+        opacity: 0;
+        transform: translateX(-8rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
